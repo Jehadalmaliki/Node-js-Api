@@ -52,5 +52,34 @@ router.get('/products/:id', async (req, res, next) => {
     res.send('sorry , we have error')
   }
 });
+router.get('/products/categories', async (req, res, next) => {
+  try {
+    
+    let response = await axios.get(
+      `https://dummyjson.com/products/${productId}`
+    );
 
+    res.render('catogray', {
+      products: response.data.products,
+    });
+  } catch (err) {
+    console.log(err);
+    res.send('sorry , we have error')
+  }
+});
+router.get('/products/categories:categoryName', async (req, res, next) => {
+  try {
+    
+    let response = await axios.get(
+      `https://dummyjson.com/products/categories`
+    );
+
+    res.render('catogray', {
+      products: response.data.products,
+    });
+  } catch (err) {
+    console.log(err);
+    res.send('sorry , we have error')
+  }
+});
 module.exports = router;
