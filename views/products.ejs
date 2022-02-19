@@ -116,17 +116,26 @@
   </button>
 </div>
 <!-- slider end -->
+<div class="row">
+    <div class="col-sm-6">
 <% products.forEach(product => { %>
-    <div>
-      <img width="300" src=" <%= product.thumbnail %> " alt="" />
-      <h4>
+    
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=" <%= product.thumbnail %> " alt="Card image cap" />
+        <div class="card-body">
+        <h4 class="card-title">
+        
         <a href="/products/<%= product.id %>"> <%= product.title %> </a>
       </h4>
-      <p><%= product.description %></p>
-    
+      <p class="card-text"><%= product.description %></p>
+      <a href="#" class="btn btn-primary">Book Now</a>
       <hr />
+      </div>
     </div>
+
     <% }) %>
+</div>
+</div>  
 <!-- Footer start -->
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
