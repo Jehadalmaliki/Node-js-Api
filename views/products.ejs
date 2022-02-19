@@ -116,12 +116,12 @@
   </button>
 </div>
 <!-- slider end -->
-<div class="row">
-    <div class="col-sm-6">
+<div class="container">
+    <div class="row">
 <% products.forEach(product => { %>
-    
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src=" <%= product.thumbnail %> " alt="Card image cap" />
+    <div class="col-sm">
+    <div class="card  " style="width: 18rem;">
+        <img class="card-img-top  rounded mx-auto d-block" src=" <%= product.thumbnail %> " alt="Card image cap" />
         <div class="card-body">
         <h4 class="card-title">
         
@@ -132,6 +132,8 @@
       <hr />
       </div>
     </div>
+    </div>
+   
 
     <% }) %>
 </div>
